@@ -1,0 +1,679 @@
+2016/12/19 15:23:19  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 15:23:25  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:51972, net id 0, now 1
+2016/12/19 15:23:25  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:51972 true
+2016/12/19 15:23:25  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:141) - [127.0.0.1:51972] on connect
+2016/12/19 15:23:25 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:23:29 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:23:29  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:48) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:51972]
+2016/12/19 15:23:40 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 15:23:40  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:151) - [reezhou$&^%*$127.0.0.1:51972] on close
+2016/12/19 15:23:40  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:163) - [reezhou$&^%*$127.0.0.1:51972] on close success.
+2016/12/19 15:23:40  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 15:24:31  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:51983, net id 1, now 1
+2016/12/19 15:24:31  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:51983 true
+2016/12/19 15:24:31  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:141) - [127.0.0.1:51983] on connect
+2016/12/19 15:24:31 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:24:31 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:24:31  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:48) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:51983]
+2016/12/19 15:25:01 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:25:01 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:25:01  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:48) - user[reezhou] login success with conn name[reezhou$&^%*$reezhou$&^%*$127.0.0.1:51983]
+2016/12/19 15:25:15 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 15:25:15  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:151) - [reezhou$&^%*$reezhou$&^%*$127.0.0.1:51983] on close
+2016/12/19 15:25:15 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:154) - [reezhou$&^%*$reezhou$&^%*$127.0.0.1:51983] name error.
+2016/12/19 15:25:15  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 15:33:54  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 15:34:01  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:52032, net id 0, now 1
+2016/12/19 15:34:01  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:52032 true
+2016/12/19 15:34:01  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:147) - [127.0.0.1:52032] on connect
+2016/12/19 15:34:01 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:34:01 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:34:01  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:53) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:52032]
+2016/12/19 15:34:31 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:34:31 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:34:48  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:52047, net id 1, now 2
+2016/12/19 15:34:48  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:147) - [127.0.0.1:52047] on connect
+2016/12/19 15:34:48  INFO [tao.(*TCPServer).Start] (server.go:165) - Client reezhou$&^%*$127.0.0.1:52032 true
+2016/12/19 15:34:48  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:52047 true
+2016/12/19 15:34:48 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:34:48 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:34:48  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$127.0.0.1:52032] kick off line, for relogin
+2016/12/19 15:34:48  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:157) - conn[reezhou$&^%*$127.0.0.1:52032] on close
+2016/12/19 15:34:48  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:169) - conn[reezhou$&^%*$127.0.0.1:52032] on close clear success.
+2016/12/19 15:34:48 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 15:34:48  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 1
+2016/12/19 15:34:48  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:52047]
+2016/12/19 15:35:18 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:35:18 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:38:02  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 15:38:11  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:52071, net id 0, now 1
+2016/12/19 15:38:11  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:52071 true
+2016/12/19 15:38:11  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:147) - [127.0.0.1:52071] on connect
+2016/12/19 15:38:11 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:38:11 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:38:11  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:53) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:52071]
+2016/12/19 15:38:22  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:52078, net id 1, now 2
+2016/12/19 15:38:22  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:52078 true
+2016/12/19 15:38:22  INFO [tao.(*TCPServer).Start] (server.go:165) - Client reezhou$&^%*$127.0.0.1:52071 true
+2016/12/19 15:38:22  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:147) - [127.0.0.1:52078] on connect
+2016/12/19 15:38:22 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:38:22 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:38:22  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$127.0.0.1:52071] kick off line, for relogin
+2016/12/19 15:38:22  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:157) - conn[reezhou$&^%*$127.0.0.1:52071] on close
+2016/12/19 15:44:57  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 15:45:05  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:52234, net id 0, now 1
+2016/12/19 15:45:05  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:52234 true
+2016/12/19 15:45:05  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:145) - [127.0.0.1:52234] on connect
+2016/12/19 15:45:05 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:45:06 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:45:06  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:53) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:52234]
+2016/12/19 15:45:16  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:52241, net id 1, now 2
+2016/12/19 15:45:16  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:145) - [127.0.0.1:52241] on connect
+2016/12/19 15:45:16  INFO [tao.(*TCPServer).Start] (server.go:165) - Client reezhou$&^%*$127.0.0.1:52234 true
+2016/12/19 15:45:16  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:52241 true
+2016/12/19 15:45:16 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:45:16 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:45:16  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$127.0.0.1:52234] kick off line, for relogin
+2016/12/19 15:45:16  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:155) - conn[reezhou$&^%*$127.0.0.1:52234] on close
+2016/12/19 15:45:16  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:169) - conn[reezhou$&^%*$127.0.0.1:52234] on close clear success.
+2016/12/19 15:45:16 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 15:45:16  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 1
+2016/12/19 15:45:16  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:52241]
+2016/12/19 15:57:44  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 15:57:58  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:52411, net id 0, now 1
+2016/12/19 15:57:58  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:52411 true
+2016/12/19 15:57:58  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:145) - [127.0.0.1:52411] on connect
+2016/12/19 15:57:58 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:57:58 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:57:58  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:53) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:52411]
+2016/12/19 15:58:03  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:52417, net id 1, now 2
+2016/12/19 15:58:03  INFO [tao.(*TCPServer).Start] (server.go:165) - Client reezhou$&^%*$127.0.0.1:52411 true
+2016/12/19 15:58:03  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:52417 true
+2016/12/19 15:58:03  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:145) - [127.0.0.1:52417] on connect
+2016/12/19 15:58:03 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:58:03 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:58:03  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$127.0.0.1:52411] kick off line, for relogin
+2016/12/19 15:58:03  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:155) - conn[reezhou$&^%*$127.0.0.1:52411] on close
+2016/12/19 15:58:03  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:169) - conn[reezhou$&^%*$127.0.0.1:52411] on close clear success.
+2016/12/19 15:58:03 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 15:58:03  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 1
+2016/12/19 15:58:03  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:52417]
+2016/12/19 15:58:33 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 15:58:33 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 15:58:39 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 15:58:39  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:155) - conn[reezhou$&^%*$127.0.0.1:52417] on close
+2016/12/19 15:58:39  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:169) - conn[reezhou$&^%*$127.0.0.1:52417] on close clear success.
+2016/12/19 15:58:39  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 16:00:06  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:52448, net id 2, now 1
+2016/12/19 16:00:06  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:145) - [127.0.0.1:52448] on connect
+2016/12/19 16:00:06  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:52448 true
+2016/12/19 16:00:06 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 16:00:06 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 16:00:06  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:53) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:52448]
+2016/12/19 16:00:11 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 16:00:11 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 16:00:16 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 16:00:16  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:155) - conn[reezhou$&^%*$127.0.0.1:52448] on close
+2016/12/19 16:00:16  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:169) - conn[reezhou$&^%*$127.0.0.1:52448] on close clear success.
+2016/12/19 16:00:16  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 16:07:50  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 16:07:58  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:52549, net id 0, now 1
+2016/12/19 16:07:58  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:52549 true
+2016/12/19 16:07:58  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:52549] on connect
+2016/12/19 16:07:58 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 16:07:59 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 16:07:59  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:53) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:52549]
+2016/12/19 16:08:03 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 16:08:03 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 16:08:08 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 16:08:08  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:52549] on close
+2016/12/19 16:08:08  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:52549] on close clear success.
+2016/12/19 16:08:08  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 16:08:48  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 16:08:56  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:52573, net id 0, now 1
+2016/12/19 16:08:56  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:52573 true
+2016/12/19 16:08:56  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:52573] on connect
+2016/12/19 16:08:56 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 16:08:56 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 16:08:56  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:53) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:52573]
+2016/12/19 16:09:01 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 16:09:01 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 16:09:06 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Logout MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 16:09:06 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 16:09:06  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:73) - start to logout: reezhou$&^%*$127.0.0.1:52573
+2016/12/19 16:09:06  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:117) - user[reezhou] conn.name[reezhou$&^%*$127.0.0.1:52573] logout success
+2016/12/19 16:09:06  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:52573] on close
+2016/12/19 16:09:06  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:52573] on close clear success.
+2016/12/19 16:09:06 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 16:09:06  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 17:36:17  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 17:45:42  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:65476, net id 0, now 1
+2016/12/19 17:45:42  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:65476 true
+2016/12/19 17:45:42  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:65476] on connect
+2016/12/19 17:45:50 ERROR [tao.readLoop] (connection.go:631) - Error decoding message read tcp 192.168.5.102:7899->192.168.5.112:65476: read: connection reset by peer
+2016/12/19 17:45:50  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:65476] on close
+2016/12/19 17:45:50 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:65476] name error.
+2016/12/19 17:45:50  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 17:57:33  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:54806, net id 1, now 1
+2016/12/19 17:57:33  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:54806 true
+2016/12/19 17:57:33  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:54806] on connect
+2016/12/19 17:57:33 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 17:57:34 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 17:57:34  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:54806]
+2016/12/19 17:57:38 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 17:57:38 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 17:57:43 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Logout MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 17:57:43 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 17:57:43  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:73) - start to logout: reezhou$&^%*$127.0.0.1:54806
+2016/12/19 17:57:43  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:54806] on close
+2016/12/19 17:57:43  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:54806] on close clear success.
+2016/12/19 17:57:43 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 17:57:43  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 17:57:43  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:120) - user[reezhou] conn.name[reezhou$&^%*$127.0.0.1:54806] logout success
+2016/12/19 18:00:14  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49303, net id 2, now 1
+2016/12/19 18:00:14  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49303 true
+2016/12/19 18:00:14  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49303] on connect
+2016/12/19 18:00:15 ERROR [tao.readLoop] (connection.go:631) - Error decoding message read tcp 192.168.5.102:7899->192.168.5.112:49303: read: connection reset by peer
+2016/12/19 18:00:15  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49303] on close
+2016/12/19 18:00:15 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49303] name error.
+2016/12/19 18:00:15  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 18:00:21  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49306, net id 3, now 1
+2016/12/19 18:00:21  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49306 true
+2016/12/19 18:00:21  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49306] on connect
+2016/12/19 18:03:01 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 825307441, type 825307441
+2016/12/19 18:03:01 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 18:03:01  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49306] on close
+2016/12/19 18:03:01 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49306] name error.
+2016/12/19 18:03:01  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 19:43:38  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49758, net id 4, now 1
+2016/12/19 19:43:38  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49758 true
+2016/12/19 19:43:38  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49758] on connect
+2016/12/19 19:43:44 ERROR [tao.readLoop] (connection.go:631) - Error decoding message read tcp 192.168.5.102:7899->192.168.5.112:49758: read: connection reset by peer
+2016/12/19 19:43:44  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49758] on close
+2016/12/19 19:43:44 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49758] name error.
+2016/12/19 19:43:44  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 19:43:51  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49760, net id 5, now 1
+2016/12/19 19:43:51  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49760 true
+2016/12/19 19:43:51  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49760] on connect
+2016/12/19 19:44:18  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49767, net id 6, now 2
+2016/12/19 19:44:18  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49767 true
+2016/12/19 19:44:18  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49760 true
+2016/12/19 19:44:18  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49767] on connect
+2016/12/19 19:46:31 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 825307441, type 825307441
+2016/12/19 19:46:31 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 19:46:31  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49760] on close
+2016/12/19 19:46:31 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49760] name error.
+2016/12/19 19:46:31  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 1
+2016/12/19 19:47:46 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 844710990, type 2018863693
+2016/12/19 19:47:46 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 19:47:46  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49767] on close
+2016/12/19 19:47:46 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49767] name error.
+2016/12/19 19:47:46  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 19:47:48  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49777, net id 7, now 1
+2016/12/19 19:47:48  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49777 true
+2016/12/19 19:47:48  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49777] on connect
+2016/12/19 19:47:52 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 844710990, type 2018863693
+2016/12/19 19:47:52 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 19:47:52  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49777] on close
+2016/12/19 19:47:52 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49777] name error.
+2016/12/19 19:47:52  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 19:52:22  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49792, net id 8, now 1
+2016/12/19 19:52:22  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49792 true
+2016/12/19 19:52:22  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49792] on connect
+2016/12/19 19:52:24 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 1801675120, type 825260080
+2016/12/19 19:52:24 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 19:52:24  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49792] on close
+2016/12/19 19:52:24 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49792] name error.
+2016/12/19 19:52:24  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:06:28  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49833, net id 9, now 1
+2016/12/19 20:06:28  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49833 true
+2016/12/19 20:06:28  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49833] on connect
+2016/12/19 20:06:30 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than data len
+2016/12/19 20:06:30  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49833] on close
+2016/12/19 20:06:30 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49833] name error.
+2016/12/19 20:06:30  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:10:13  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49851, net id 10, now 1
+2016/12/19 20:10:13  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49851 true
+2016/12/19 20:10:13  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49851] on connect
+2016/12/19 20:10:16 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than data len
+2016/12/19 20:10:16  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49851] on close
+2016/12/19 20:10:16 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49851] name error.
+2016/12/19 20:10:16  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:17:27  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:56297, net id 11, now 1
+2016/12/19 20:17:27  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:56297] on connect
+2016/12/19 20:17:27  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:56297 true
+2016/12/19 20:17:27 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 20:17:42 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 20:17:42  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[127.0.0.1:56297] on close
+2016/12/19 20:17:42 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [127.0.0.1:56297] name error.
+2016/12/19 20:17:42  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:17:45 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:17:45  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:56297]
+2016/12/19 20:17:45 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 20:17:45 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:18:06 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Logout MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 20:18:06 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:18:06  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:73) - start to logout: reezhou$&^%*$127.0.0.1:56297
+2016/12/19 20:18:06  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:120) - user[reezhou] conn.name[reezhou$&^%*$127.0.0.1:56297] logout success
+2016/12/19 20:18:52  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:56317, net id 12, now 1
+2016/12/19 20:18:52  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:56317] on connect
+2016/12/19 20:18:52  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:56317 true
+2016/12/19 20:18:52 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 20:18:52 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:18:52  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$127.0.0.1:56297] kick off line, for relogin
+2016/12/19 20:18:52  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:56317]
+2016/12/19 20:18:57 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 20:18:57 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:19:02 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Logout MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 20:19:02 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:19:02  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:73) - start to logout: reezhou$&^%*$127.0.0.1:56317
+2016/12/19 20:19:02  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:56317] on close
+2016/12/19 20:19:02  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:56317] on close clear success.
+2016/12/19 20:19:02 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 20:19:02  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:19:02  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:120) - user[reezhou] conn.name[reezhou$&^%*$127.0.0.1:56317] logout success
+2016/12/19 20:22:43  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49895, net id 13, now 1
+2016/12/19 20:22:43  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49895 true
+2016/12/19 20:22:43  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49895] on connect
+2016/12/19 20:22:47 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Loginmsglen MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 20:22:47 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:22:47 ERROR [duobb.(*DuobbProcess).checkMsg] (p_login.go:88) - user[reezhou] has no login.
+2016/12/19 20:22:47  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49895] on close
+2016/12/19 20:22:47 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49895] name error.
+2016/12/19 20:22:47 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 20:22:47  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:23:13  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49903, net id 14, now 1
+2016/12/19 20:23:13  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49903 true
+2016/12/19 20:23:13  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49903] on connect
+2016/12/19 20:23:24 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 1701969920, type 458752
+2016/12/19 20:23:24 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 20:23:24  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49903] on close
+2016/12/19 20:23:24 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49903] name error.
+2016/12/19 20:23:24  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:23:24 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 20:23:24 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:23:24  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:49903]
+2016/12/19 20:24:17  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:56367, net id 15, now 1
+2016/12/19 20:24:17  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:56367 true
+2016/12/19 20:24:17  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:56367] on connect
+2016/12/19 20:24:17 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 20:24:17 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:24:17  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$192.168.5.112:49903] kick off line, for relogin
+2016/12/19 20:24:17  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:56367]
+2016/12/19 20:24:22 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 20:24:22 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:24:27 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Logout MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 20:24:27 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:24:27  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:73) - start to logout: reezhou$&^%*$127.0.0.1:56367
+2016/12/19 20:24:27  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:56367] on close
+2016/12/19 20:24:27  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:56367] on close clear success.
+2016/12/19 20:24:27 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 20:24:27  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:24:27  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:120) - user[reezhou] conn.name[reezhou$&^%*$127.0.0.1:56367] logout success
+2016/12/19 20:24:52  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:49914, net id 16, now 1
+2016/12/19 20:24:52  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:49914 true
+2016/12/19 20:24:52  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:49914] on connect
+2016/12/19 20:25:02 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 1701969920, type 458752
+2016/12/19 20:25:02 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 20:25:02  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:49914] on close
+2016/12/19 20:25:02 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:49914] name error.
+2016/12/19 20:25:02 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MjUxNDY2MTllMjdkMjEzOWZhOWY5NDFlNGE1NmQ5NjRldzBLSUNBZ0lDSjFjMlZ5SWpvaWNtVmxlbWh2ZFNJc0RRcDk=
+2016/12/19 20:25:02  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:25:02 ERROR [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:120) - json decode[[219 157 120 235 173 125 123 110 221 219 93 253 125 175 95 247 141 94 225 174 122 119 222 184 123 13 10 32 32 32 32 34 117 115 101 114 34 58 34 114 101 101 122 104 111 117 34 44 13 10 125]] error: invalid character 'Û' looking for beginning of value
+2016/12/19 20:43:36  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50129, net id 17, now 1
+2016/12/19 20:43:36  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50129 true
+2016/12/19 20:43:36  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50129] on connect
+2016/12/19 20:43:44 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 1701969920, type 458752
+2016/12/19 20:43:44 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 20:43:44  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50129] on close
+2016/12/19 20:43:44 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50129] name error.
+2016/12/19 20:43:44  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:43:44 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MjUxNDY2MTllMjdkMjEzOWZhOWY5NDFlNGE1NmQ5NjRleUFnSW5WelpYSWlPaUp5WldWNmFHOTFJaUFnZlE9PQ==
+2016/12/19 20:43:44 ERROR [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:120) - json decode[[219 157 120 235 173 125 123 110 221 219 93 253 125 175 95 247 141 94 225 174 122 119 222 184 123 32 32 34 117 115 101 114 34 58 34 114 101 101 122 104 111 117 34 32 32 125]] error: invalid character 'Û' looking for beginning of value
+2016/12/19 20:45:59  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 20:50:45  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50163, net id 0, now 1
+2016/12/19 20:50:45  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50163 true
+2016/12/19 20:50:45  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50163] on connect
+2016/12/19 20:50:53 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 1701969920, type 458752
+2016/12/19 20:50:53 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2ljbVZsZW1odmRTSjk=
+2016/12/19 20:50:53 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 20:50:53  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50163] on close
+2016/12/19 20:50:53 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50163] name error.
+2016/12/19 20:50:53  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:50:57 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:50:57  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50163]
+2016/12/19 20:51:28  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50168, net id 1, now 1
+2016/12/19 20:51:28  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50168 true
+2016/12/19 20:51:28  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50168] on connect
+2016/12/19 20:51:41 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 1701969920, type 458752
+2016/12/19 20:51:41 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 20:51:41  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50168] on close
+2016/12/19 20:51:41 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50168] name error.
+2016/12/19 20:51:41 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2ljbVZsZW1odmRTSjk=
+2016/12/19 20:51:41  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:51:41 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:51:41  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$192.168.5.112:50163] kick off line, for relogin
+2016/12/19 20:51:41  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50168]
+2016/12/19 20:56:01  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50214, net id 2, now 1
+2016/12/19 20:56:01  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50214] on connect
+2016/12/19 20:56:01  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50214 true
+2016/12/19 20:56:13 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 1701969920, type 458752
+2016/12/19 20:56:13 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2ljbVZsZW1odmRTSjk=
+2016/12/19 20:56:13 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 20:56:13  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50214] on close
+2016/12/19 20:56:13 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50214] name error.
+2016/12/19 20:56:13  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 20:56:13 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 20:56:13  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$192.168.5.112:50168] kick off line, for relogin
+2016/12/19 20:56:13  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50214]
+2016/12/19 21:06:46  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50248, net id 3, now 1
+2016/12/19 21:06:46  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50248 true
+2016/12/19 21:06:46  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50248] on connect
+2016/12/19 21:06:58 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 1701969920, type 458752
+2016/12/19 21:06:58 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2ljbVZsZW1odmRTSjk=
+2016/12/19 21:06:58 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 21:06:58  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50248] on close
+2016/12/19 21:06:58 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50248] name error.
+2016/12/19 21:06:58  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:06:58 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:06:58  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$192.168.5.112:50214] kick off line, for relogin
+2016/12/19 21:06:58  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50248]
+2016/12/19 21:10:26  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50277, net id 4, now 1
+2016/12/19 21:10:26  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50277 true
+2016/12/19 21:10:26  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50277] on connect
+2016/12/19 21:10:36 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 1701969920, type 458752
+2016/12/19 21:10:36 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 21:10:36  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50277] on close
+2016/12/19 21:10:36 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50277] name error.
+2016/12/19 21:10:36 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2ljbVZsZW1odmRTSjk=
+2016/12/19 21:10:36  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:10:36 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:10:36  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$192.168.5.112:50248] kick off line, for relogin
+2016/12/19 21:10:36  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50277]
+2016/12/19 21:14:49  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50282, net id 5, now 1
+2016/12/19 21:14:49  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50282 true
+2016/12/19 21:14:49  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50282] on connect
+2016/12/19 21:15:25 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 1701969920, type 458752
+2016/12/19 21:15:25 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2ljbVZsZW1odmRTSjk=
+2016/12/19 21:15:25 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 21:15:25  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50282] on close
+2016/12/19 21:15:25 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50282] name error.
+2016/12/19 21:15:25  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:15:25 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:15:25  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$192.168.5.112:50277] kick off line, for relogin
+2016/12/19 21:15:25  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50282]
+2016/12/19 21:15:42  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50285, net id 6, now 1
+2016/12/19 21:15:42  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50285 true
+2016/12/19 21:15:42  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50285] on connect
+2016/12/19 21:16:08 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:171) - len 1701969920, type 458752
+2016/12/19 21:16:08 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 21:16:08  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50285] on close
+2016/12/19 21:16:08 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50285] name error.
+2016/12/19 21:16:08 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2ljbVZsZW1odmRTSjk=
+2016/12/19 21:16:08  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:16:08 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:16:08  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$192.168.5.112:50282] kick off line, for relogin
+2016/12/19 21:16:08  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50285]
+2016/12/19 21:22:34  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 21:22:40  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50319, net id 0, now 1
+2016/12/19 21:22:40  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50319 true
+2016/12/19 21:22:40  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50319] on connect
+2016/12/19 21:22:47 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2ljbVZsZW1odmRTSjk=
+2016/12/19 21:22:47 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:173) - len 1701969920, type 458752
+2016/12/19 21:22:47 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 21:22:47  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50319] on close
+2016/12/19 21:22:47 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50319] name error.
+2016/12/19 21:22:47  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:22:48 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:22:48  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50319]
+2016/12/19 21:25:32  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 21:26:21  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50331, net id 0, now 1
+2016/12/19 21:26:21  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50331 true
+2016/12/19 21:26:21  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50331] on connect
+2016/12/19 21:26:34 ERROR [tao.TypeLengthValueCodec.Decode] (message.go:173) - len 1701969920, type 458752
+2016/12/19 21:26:34 ERROR [tao.readLoop] (connection.go:631) - Error decoding message More than 8M data
+2016/12/19 21:26:34  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50331] on close
+2016/12/19 21:26:34 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50331] name error.
+2016/12/19 21:26:34 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2ljbVZsZW1odmRTSjk=
+2016/12/19 21:26:34  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:26:34 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:26:34  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50331]
+2016/12/19 21:31:18  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:57496, net id 1, now 1
+2016/12/19 21:31:18  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:57496] on connect
+2016/12/19 21:31:18  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:57496 true
+2016/12/19 21:31:18 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:31:18 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:31:18  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:41) - client[reezhou$&^%*$192.168.5.112:50331] kick off line, for relogin
+2016/12/19 21:31:18  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:46) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:57496]
+2016/12/19 21:31:23 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:31:23 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:31:28 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Logout MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:31:28 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:31:28  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:73) - start to logout: reezhou$&^%*$127.0.0.1:57496
+2016/12/19 21:31:28  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:57496] on close
+2016/12/19 21:31:28  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:57496] on close clear success.
+2016/12/19 21:31:28 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 21:31:28  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:31:28  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:120) - user[reezhou] conn.name[reezhou$&^%*$127.0.0.1:57496] logout success
+2016/12/19 21:31:56  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:57520, net id 2, now 1
+2016/12/19 21:31:56  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:57520] on connect
+2016/12/19 21:31:56  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:57520 true
+2016/12/19 21:31:56 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:31:56 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:31:56  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:57520]
+2016/12/19 21:32:01 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:32:01 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:32:06 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Logout MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:32:06 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:32:06  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:73) - start to logout: reezhou$&^%*$127.0.0.1:57520
+2016/12/19 21:32:06  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:57520] on close
+2016/12/19 21:32:06  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:57520] on close clear success.
+2016/12/19 21:32:06 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 21:32:06  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:32:06  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:120) - user[reezhou] conn.name[reezhou$&^%*$127.0.0.1:57520] logout success
+2016/12/19 21:32:26  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:57534, net id 3, now 1
+2016/12/19 21:32:26  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:57534] on connect
+2016/12/19 21:32:26  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:57534 true
+2016/12/19 21:32:26 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:32:26 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:32:26  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:57534]
+2016/12/19 21:32:31 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:32:31 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:32:36 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Logout MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:32:36 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:32:36  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:73) - start to logout: reezhou$&^%*$127.0.0.1:57534
+2016/12/19 21:32:36  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:57534] on close
+2016/12/19 21:32:36  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:57534] on close clear success.
+2016/12/19 21:32:36 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 21:32:36  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:32:36  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:120) - user[reezhou] conn.name[reezhou$&^%*$127.0.0.1:57534] logout success
+2016/12/19 21:36:54  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:57613, net id 4, now 1
+2016/12/19 21:36:54  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:57613] on connect
+2016/12/19 21:36:54  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:57613 true
+2016/12/19 21:36:54 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:36:54 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:36:54  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:57613]
+2016/12/19 21:36:59 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:36:59 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:37:04 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Logout MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:37:04 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:37:04  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:73) - start to logout: reezhou$&^%*$127.0.0.1:57613
+2016/12/19 21:37:04  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:57613] on close
+2016/12/19 21:37:04  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:57613] on close clear success.
+2016/12/19 21:37:04 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 21:37:04  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:37:04  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:120) - user[reezhou] conn.name[reezhou$&^%*$127.0.0.1:57613] logout success
+2016/12/19 21:39:55  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:57657, net id 5, now 1
+2016/12/19 21:39:55  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:57657] on connect
+2016/12/19 21:39:55  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:57657 true
+2016/12/19 21:39:55 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:39:55 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:39:55  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:57657]
+2016/12/19 21:40:00 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:40:00 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:40:05 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Logout MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:40:05 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:40:05  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:73) - start to logout: reezhou$&^%*$127.0.0.1:57657
+2016/12/19 21:40:05  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:57657] on close
+2016/12/19 21:40:05  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:57657] on close clear success.
+2016/12/19 21:40:05 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 21:40:05  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:40:05  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:120) - user[reezhou] conn.name[reezhou$&^%*$127.0.0.1:57657] logout success
+2016/12/19 21:40:37  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:57669, net id 6, now 1
+2016/12/19 21:40:37  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:57669] on connect
+2016/12/19 21:40:37  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:57669 true
+2016/12/19 21:40:37 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:40:37 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:40:37  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:57669]
+2016/12/19 21:40:42 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.GetDuobbAccount MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:40:42 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:40:47 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Logout MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:40:47 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:40:47  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:73) - start to logout: reezhou$&^%*$127.0.0.1:57669
+2016/12/19 21:40:47  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:57669] on close
+2016/12/19 21:40:47  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:57669] on close clear success.
+2016/12/19 21:40:47 ERROR [tao.readLoop] (connection.go:631) - Error decoding message Connection closed
+2016/12/19 21:40:47  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:40:47  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:120) - user[reezhou] conn.name[reezhou$&^%*$127.0.0.1:57669] logout success
+2016/12/19 21:41:28  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 127.0.0.1:57679, net id 7, now 1
+2016/12/19 21:41:28  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 127.0.0.1:57679 true
+2016/12/19 21:41:28  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [127.0.0.1:57679] on connect
+2016/12/19 21:41:28 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:41:28 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:41:28  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$127.0.0.1:57679]
+2016/12/19 21:41:32 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 21:41:32  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$127.0.0.1:57679] on close
+2016/12/19 21:41:32  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$127.0.0.1:57679] on close clear success.
+2016/12/19 21:41:32  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:42:14  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50420, net id 8, now 1
+2016/12/19 21:42:14  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50420 true
+2016/12/19 21:42:14  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50420] on connect
+2016/12/19 21:45:26  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50438, net id 9, now 2
+2016/12/19 21:45:26  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50420 true
+2016/12/19 21:45:26  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50438 true
+2016/12/19 21:45:26  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50438] on connect
+2016/12/19 21:45:28 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:45:28 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:45:28  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50438]
+2016/12/19 21:45:41 ERROR [tao.readLoop] (connection.go:631) - Error decoding message read tcp 192.168.5.102:7899->192.168.5.112:50438: read: connection reset by peer
+2016/12/19 21:45:41  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$192.168.5.112:50438] on close
+2016/12/19 21:45:41  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$192.168.5.112:50438] on close clear success.
+2016/12/19 21:45:41  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 1
+2016/12/19 21:46:07  INFO [controller.(*DuobbAccessServer).Start] (server.go:41) - duobb access listen on[:7899]
+2016/12/19 21:46:45  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50445, net id 0, now 1
+2016/12/19 21:46:45  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50445 true
+2016/12/19 21:46:45  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50445] on connect
+2016/12/19 21:46:58 ERROR [tao.readLoop] (connection.go:631) - Error decoding message read tcp 192.168.5.102:7899->192.168.5.112:50445: read: connection reset by peer
+2016/12/19 21:46:58  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50445] on close
+2016/12/19 21:46:58 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50445] name error.
+2016/12/19 21:46:58  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 21:47:30  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50452, net id 1, now 1
+2016/12/19 21:47:30  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50452] on connect
+2016/12/19 21:47:30  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50452 true
+2016/12/19 21:47:31 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 21:47:31 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 21:47:31  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50452]
+2016/12/19 21:48:20 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 21:48:20  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$192.168.5.112:50452] on close
+2016/12/19 21:48:20  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$192.168.5.112:50452] on close clear success.
+2016/12/19 21:48:20  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 22:11:23  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50533, net id 2, now 1
+2016/12/19 22:11:23  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50533] on connect
+2016/12/19 22:11:23  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50533 true
+2016/12/19 22:11:25 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 22:11:25 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 22:11:25  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50533]
+2016/12/19 22:11:32 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 22:11:32  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$192.168.5.112:50533] on close
+2016/12/19 22:11:32  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$192.168.5.112:50533] on close clear success.
+2016/12/19 22:11:32  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 22:12:12  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50536, net id 3, now 1
+2016/12/19 22:12:12  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50536 true
+2016/12/19 22:12:12  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50536] on connect
+2016/12/19 22:12:14 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 22:12:14 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 22:12:14  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50536]
+2016/12/19 22:12:35 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 22:12:35  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$192.168.5.112:50536] on close
+2016/12/19 22:12:35  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$192.168.5.112:50536] on close clear success.
+2016/12/19 22:12:35  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 22:14:02  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50541, net id 4, now 1
+2016/12/19 22:14:02  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50541] on connect
+2016/12/19 22:14:02  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50541 true
+2016/12/19 22:14:04 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 22:14:04 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 22:14:04  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50541]
+2016/12/19 22:14:09 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 22:14:09  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$192.168.5.112:50541] on close
+2016/12/19 22:14:09  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$192.168.5.112:50541] on close clear success.
+2016/12/19 22:14:09  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 22:18:54  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50557, net id 5, now 1
+2016/12/19 22:18:54  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50557] on connect
+2016/12/19 22:18:54  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50557 true
+2016/12/19 22:18:55 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/19 22:18:55 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/19 22:18:55  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.112:50557]
+2016/12/19 22:19:27 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/19 22:19:27  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$192.168.5.112:50557] on close
+2016/12/19 22:19:27  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$192.168.5.112:50557] on close clear success.
+2016/12/19 22:19:27  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/19 22:19:32  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.112:50566] on connect
+2016/12/19 22:19:32  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.112:50566, net id 6, now 1
+2016/12/19 22:19:32  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.112:50566 true
+2016/12/19 22:19:34 ERROR [tao.readLoop] (connection.go:631) - Error decoding message read tcp 192.168.5.102:7899->192.168.5.112:50566: read: connection reset by peer
+2016/12/19 22:19:34  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[192.168.5.112:50566] on close
+2016/12/19 22:19:34 ERROR [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:159) - [192.168.5.112:50566] name error.
+2016/12/19 22:19:34  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/20 12:58:11  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.130:50437] on connect
+2016/12/20 12:58:11  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.130:50437, net id 7, now 1
+2016/12/20 12:58:11  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.130:50437 true
+2016/12/20 12:58:14 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/20 12:58:18 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/20 12:58:18  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.130:50437]
+2016/12/20 12:58:23 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/20 12:58:23  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$192.168.5.130:50437] on close
+2016/12/20 12:58:23  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$192.168.5.130:50437] on close clear success.
+2016/12/20 12:58:23  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/20 13:03:58  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.130:50475, net id 8, now 1
+2016/12/20 13:03:58  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.130:50475 true
+2016/12/20 13:03:58  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.130:50475] on connect
+2016/12/20 13:03:59 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/20 13:03:59 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/20 13:03:59  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.130:50475]
+2016/12/20 13:05:35 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Heartbeat MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/20 13:05:36 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/20 13:05:36 ERROR [duobb.(*JsonRpc).Call] (jsonrpc.go:44) - json decode client response error: invalid character 'r' looking for beginning of value
+2016/12/20 13:05:36 ERROR [duobb.(*DuobbProcess).process] (p_backend.go:55) - jsonrpc call host[127.0.0.1:7878] method[DuobbAccountService.Heartbeat] request[map[user:reezhou]] error: invalid character 'r' looking for beginning of value
+2016/12/20 13:05:36 ERROR [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:128) - backend process request[map[user:reezhou]] error: invalid character 'r' looking for beginning of value
+2016/12/20 13:06:01 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Heartbeat MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/20 13:06:01 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/20 13:06:01 ERROR [duobb.(*JsonRpc).Call] (jsonrpc.go:44) - json decode client response error: invalid character 'r' looking for beginning of value
+2016/12/20 13:06:01 ERROR [duobb.(*DuobbProcess).process] (p_backend.go:55) - jsonrpc call host[127.0.0.1:7878] method[DuobbAccountService.Heartbeat] request[map[user:reezhou]] error: invalid character 'r' looking for beginning of value
+2016/12/20 13:06:01 ERROR [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:128) - backend process request[map[user:reezhou]] error: invalid character 'r' looking for beginning of value
+2016/12/20 13:08:16 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/20 13:08:16  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$192.168.5.130:50475] on close
+2016/12/20 13:08:16 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Heartbeat MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/20 13:08:16  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$192.168.5.130:50475] on close clear success.
+2016/12/20 13:08:16  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
+2016/12/20 13:08:16 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/20 13:08:16 ERROR [duobb.(*DuobbProcess).checkMsg] (p_login.go:88) - user[reezhou] has no login.
+2016/12/20 13:10:02  INFO [tao.(*TCPServer).Start] (server.go:162) - Accepting client 192.168.5.130:50520, net id 9, now 1
+2016/12/20 13:10:02  INFO [tao.(*TCPServer).Start] (server.go:165) - Client 192.168.5.130:50520 true
+2016/12/20 13:10:02  INFO [duobb.(*DuobbProcess).OnConnectCallback] (p_login.go:146) - [192.168.5.130:50520] on connect
+2016/12/20 13:10:03 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Login MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/20 13:10:03 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/20 13:10:03  INFO [duobb.(*DuobbProcess).checkMsg] (p_login.go:55) - user[reezhou] login success with conn name[reezhou$&^%*$192.168.5.130:50520]
+2016/12/20 13:11:57 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Heartbeat MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/20 13:11:57 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/20 13:11:57 ERROR [duobb.(*JsonRpc).Call] (jsonrpc.go:44) - json decode client response error: invalid character 'r' looking for beginning of value
+2016/12/20 13:11:57 ERROR [duobb.(*DuobbProcess).process] (p_backend.go:55) - jsonrpc call host[127.0.0.1:7878] method[DuobbAccountService.Heartbeat] request[map[user:reezhou]] error: invalid character 'r' looking for beginning of value
+2016/12/20 13:11:57 ERROR [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:128) - backend process request[map[user:reezhou]] error: invalid character 'r' looking for beginning of value
+2016/12/20 13:12:05 DEBUG [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:94) - reezhou DuobbAccountService.Heartbeat MTJhMDc2YTQ2ZTAyYjg3ZTlhNzYwNmRmMjhmMWQwZmNleUoxYzJWeUlqb2dJbkpsWlhwb2IzVWlmUT09
+2016/12/20 13:12:05 DEBUG [duobb.(*DuobbProcess).checkMsg] (p_login.go:15) - request in check msg: map[user:reezhou]
+2016/12/20 13:12:05 ERROR [duobb.(*JsonRpc).Call] (jsonrpc.go:44) - json decode client response error: invalid character 'r' looking for beginning of value
+2016/12/20 13:12:05 ERROR [duobb.(*DuobbProcess).process] (p_backend.go:55) - jsonrpc call host[127.0.0.1:7878] method[DuobbAccountService.Heartbeat] request[map[user:reezhou]] error: invalid character 'r' looking for beginning of value
+2016/12/20 13:12:05 ERROR [duobb.(*DuobbProcess).ProcessDuobbMessage] (process.go:128) - backend process request[map[user:reezhou]] error: invalid character 'r' looking for beginning of value
+2016/12/20 13:12:26 ERROR [tao.readLoop] (connection.go:631) - Error decoding message EOF
+2016/12/20 13:12:26  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:156) - conn[reezhou$&^%*$192.168.5.130:50520] on close
+2016/12/20 13:12:26  INFO [duobb.(*DuobbProcess).OnCloseCallback] (p_login.go:170) - conn[reezhou$&^%*$192.168.5.130:50520] on close clear success.
+2016/12/20 13:12:26  INFO [tao.(*ServerConnection).Close.func1] (connection.go:205) - HOW MANY CONNECTIONS DO I HAVE: 0
