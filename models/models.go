@@ -27,7 +27,7 @@ func InitDB(cfg *config.Config) {
 	x.SetMapper(core.GonicMapper{})
 	x.TZLocation, _ = time.LoadLocation("Asia/Shanghai")
 
-	if err = x.Sync2(new(Service), new(ServiceMethod)); err != nil {
+	if err = x.Sync2(new(Service), new(ServiceMethod), new(DuobbPushMsg)); err != nil {
 		logrus.Fatalf("Fail to sync database: %v", err)
 	}
 }

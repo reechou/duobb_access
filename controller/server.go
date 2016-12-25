@@ -17,10 +17,10 @@ type DuobbAccessServer struct {
 
 func NewDuobbAccessServer(cfg *config.Config) *DuobbAccessServer {
 	das := &DuobbAccessServer{
-		Server:  tao.NewTCPServer(cfg.Host),
-		process: duobb.NewDuobbProcess(cfg),
-		cfg:     cfg,
+		Server: tao.NewTCPServer(cfg.Host),
+		cfg:    cfg,
 	}
+	das.process = duobb.NewDuobbProcess(cfg, das.Server)
 	das.init()
 
 	return das

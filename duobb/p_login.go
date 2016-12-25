@@ -85,6 +85,13 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 		}
 	case DUOBB_ACCESS_HEARTBEAT:
 		holmes.Debug("conn[%s] in heartbeat", conn.GetName())
+		heartbeatData, err := self.checkHeartbeat(decodeMsg)
+		if err != nil {
+			resultResponse.Code = duobb_proto.DUOBB_MSG_HEARTBEAT_ERROR
+			resultResponse.Msg = duobb_proto.MSG_DUOBB_HEARTBEAT_ERROR
+		} else {
+			resultResponse.Data = heartbeatData
+		}
 	default:
 		if c == nil {
 			holmes.Error("user[%s] has no login.", string(msg.UserName))
@@ -115,10 +122,10 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 	if err != nil {
 		holmes.Error("conn[%s] write response msg[%v] error: %v", conn.GetName(), rsp, err)
 	}
-	if resultResponse.Code != duobb_proto.DUOBB_RSP_SUCCESS {
-		// clear conn
-		conn.Close()
-	}
+	//if resultResponse.Code != duobb_proto.DUOBB_RSP_SUCCESS {
+	//	// clear conn
+	//	conn.Close()
+	//}
 	if ifLogout {
 		// clear conn
 		c.Close()

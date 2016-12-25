@@ -26,9 +26,10 @@ type DuobbProcess struct {
 	sec        *Security
 	jsonRpc    *JsonRpc
 	normalHttp *NormalHttp
+	server     tao.Server
 }
 
-func NewDuobbProcess(cfg *config.Config) *DuobbProcess {
+func NewDuobbProcess(cfg *config.Config, server tao.Server) *DuobbProcess {
 	dp := &DuobbProcess{
 		cfg:              cfg,
 		sec:              &Security{},
@@ -37,6 +38,7 @@ func NewDuobbProcess(cfg *config.Config) *DuobbProcess {
 		serviceMap:       make(map[string]*BackendService),
 		serviceMethodMap: make(map[string]*BackendServiceMethod),
 		connMap:          make(map[string]tao.Connection),
+		server:           server,
 	}
 	dp.initService()
 	go dp.httpInit()

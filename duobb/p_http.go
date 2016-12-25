@@ -3,6 +3,7 @@ package duobb
 import (
 	"encoding/json"
 	"net/http"
+	"net/url"
 
 	"github.com/reechou/duobb_access/models"
 	"github.com/reechou/holmes"
@@ -18,6 +19,9 @@ func (self *DuobbProcess) httpInit() {
 	http.HandleFunc("/cfg/create_service", self.CreateService)
 	http.HandleFunc("/cfg/create_service_method", self.CreateServiceMethod)
 	http.HandleFunc("/cfg/load_service", self.LoadService)
+	
+	http.HandleFunc("/duobb/login_user_num", self.GetDuobbLoginUserNum)
+	http.HandleFunc("/duobb/create_push_msg", self.CreatePushMsg)
 
 	holmes.Info("duobb access cfg http listen on:[%s]", self.cfg.CfgHost)
 	if err := http.ListenAndServe(self.cfg.CfgHost, nil); err != nil {
@@ -68,6 +72,32 @@ func (self *DuobbProcess) LoadService(w http.ResponseWriter, r *http.Request) {
 		rsp.Code = 1
 		rsp.Msg = err.Error()
 	}
+	WriteJSON(w, http.StatusOK, rsp)
+}
+
+func (self *DuobbProcess) GetDuobbLoginUserNum(w http.ResponseWriter, r *http.Request) {
+	rsp := &DuobbAccessCfgHttpRes{Code: 0}
+	rsp.Data = self.server.GetConnectionMap().Size()
+	WriteJSON(w, http.StatusOK, rsp)
+}
+
+func (self *DuobbProcess) CreatePushMsg(w http.ResponseWriter, r *http.Request) {
+	req := &models.DuobbPushMsg{}
+	if err := json.NewDecoder(r.Body).Decode(req); err != nil {
+		holmes.Error("CreateServiceMethod json decode error: %v", err)
+		return
+	}
+	
+	rsp := &DuobbAccessCfgHttpRes{Code: 0}
+	req.Msg = url.QueryEscape(req.Msg)
+	holmes.Debug("create push msg req: %v", req)
+	err := models.CreateDuobbPushMsg(req)
+	if err != nil {
+		holmes.Error("CreatePushMsg error: %v", err)
+		rsp.Code = 1
+		rsp.Msg = err.Error()
+	}
+	
 	WriteJSON(w, http.StatusOK, rsp)
 }
 

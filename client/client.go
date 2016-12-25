@@ -52,8 +52,8 @@ func main() {
 	time.Sleep(5 * time.Second)
 	msg = &duobb.DuobbMsg{
 		UserName: []byte("reezhou"),
-		Method:   []byte("SelectProductService.GetSpPlanListFromUser"),
-		Msg:      EncodePlanMsg(),
+		Method:   []byte("DuobbAccountService.Heartbeat"),
+		Msg:      EncodeHeartbeat(),
 	}
 	tcpConnection.Write(msg)
 	time.Sleep(5 * time.Second)
@@ -86,6 +86,15 @@ func EncodeMsg() []byte {
 	s := &duobb.Security{}
 	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456reezhou")))
 	msgEncode1 := s.Base64Encode([]byte(`{"user": "reezhou"}`))
+	msgEncode1 = append(secretKey, msgEncode1...)
+	result, _ := s.GzipEncode(msgEncode1)
+	return result
+}
+
+func EncodeHeartbeat() []byte {
+	s := &duobb.Security{}
+	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456reezhou")))
+	msgEncode1 := s.Base64Encode([]byte(`{"user":"reezhou","lastPushMsgTime":0}`))
 	msgEncode1 = append(secretKey, msgEncode1...)
 	result, _ := s.GzipEncode(msgEncode1)
 	return result
