@@ -92,6 +92,8 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 		} else {
 			resultResponse.Data = heartbeatData
 		}
+	case DUOBB_ACCESS_GETALLDATA:
+		return true
 	default:
 		if c == nil {
 			holmes.Error("user[%s] has no login.", string(msg.UserName))

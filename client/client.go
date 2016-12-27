@@ -59,8 +59,8 @@ func main() {
 	time.Sleep(5 * time.Second)
 	msg = &duobb.DuobbMsg{
 		UserName: []byte("reezhou"),
-		Method:   []byte("SelectProductService.GetSpPlanListFromUser"),
-		Msg:      EncodePlanMsg(),
+		Method:   []byte("DuobbAccountService.GetAllDuobbData"),
+		Msg:      EncodeMsg(),
 	}
 	tcpConnection.Write(msg)
 	time.Sleep(5 * time.Second)
