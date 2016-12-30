@@ -23,7 +23,7 @@ func (self *DuobbProcess) httpInit() {
 	http.HandleFunc("/duobb/login_user_num", self.GetDuobbLoginUserNum)
 	http.HandleFunc("/duobb/create_push_msg", self.CreatePushMsg)
 
-	holmes.Info("duobb access cfg http listen on:[%s]", self.cfg.CfgHost)
+	holmes.Info("duobb access cfg http listen on[%s]", self.cfg.CfgHost)
 	if err := http.ListenAndServe(self.cfg.CfgHost, nil); err != nil {
 		holmes.Errorln(err)
 		return

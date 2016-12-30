@@ -38,6 +38,10 @@ func main() {
 
 	tcpConnection.SetOnMessageCallback(func(msg tao.Message, client tao.Connection) {
 		fmt.Println(string(msg.(*duobb.DuobbMsg).UserName), string(msg.(*duobb.DuobbMsg).Method), len(msg.(*duobb.DuobbMsg).Msg))
+		if string(msg.(*duobb.DuobbMsg).Method) == "DuobbAccountService.LogoutKickOff" {
+			fmt.Println("kick off")
+			client.Close()
+		}
 		DecodeMsg(msg.(*duobb.DuobbMsg).Msg)
 	})
 
@@ -49,7 +53,7 @@ func main() {
 		Msg:      EncodeMsg(),
 	}
 	tcpConnection.Write(msg)
-	time.Sleep(5 * time.Second)
+	time.Sleep(40 * time.Second)
 	msg = &duobb.DuobbMsg{
 		UserName: []byte("reezhou"),
 		Method:   []byte("DuobbAccountService.Heartbeat"),

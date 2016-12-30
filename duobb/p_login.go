@@ -38,20 +38,36 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 				if c != nil {
 					if c.GetName() != conn.GetName() {
 						// maybe write [kick off line] msg
-						holmes.Info("client[%s] kick off line, for relogin", c.GetName())
-						c.Close()
+						holmes.Info("client[%s] start to kick off line, for relogin", c.GetName())
+						session := c.GetExtraData().(Session)
+						session.Status = LOGOUT_KICKOFF
+						c.SetExtraData(session)
+						self.PushMsg(DUOBB_ACCESS_LOGOUT_KICKOFF, msg.UserName, nil, c)
+						//c.Close()
 
 						self.connMutex.Lock()
 						conn.SetName(requestUser + CONN_NAME_DELIMITER + conn.GetName())
-						holmes.Info("user[%s] login success with conn name[%s]", requestUser, conn.GetName())
 						self.connMap[requestUser] = conn
 						self.connMutex.Unlock()
+						
+						sessionNew := Session{
+							User:   requestUser,
+							Status: LOGIN,
+						}
+						conn.SetExtraData(sessionNew)
+						holmes.Info("user[%s] relogin success with conn name[%s]", requestUser, conn.GetName())
 					}
 				} else {
 					self.connMutex.Lock()
 					conn.SetName(requestUser + CONN_NAME_DELIMITER + conn.GetName())
 					self.connMap[requestUser] = conn
 					self.connMutex.Unlock()
+					
+					session := Session{
+						User:   requestUser,
+						Status: LOGIN,
+					}
+					conn.SetExtraData(session)
 					holmes.Info("user[%s] login success with conn name[%s]", requestUser, conn.GetName())
 				}
 			}
@@ -85,6 +101,17 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 		}
 	case DUOBB_ACCESS_HEARTBEAT:
 		holmes.Debug("conn[%s] in heartbeat", conn.GetName())
+		//session := conn.GetExtraData().(Session)
+		//if session.Status == LOGOUT_KICKOFF {
+		//	hm, err := self.heartbeatKickoff(requestUser)
+		//	if err != nil {
+		//		holmes.Error("hearbeat kickoff create push msg error: %v", err)
+		//		resultResponse.Code = duobb_proto.DUOBB_MSG_HEARTBEAT_ERROR
+		//		resultResponse.Msg = duobb_proto.MSG_DUOBB_HEARTBEAT_ERROR
+		//	} else {
+		//		resultResponse.Data = hm
+		//	}
+		//} else {
 		heartbeatData, err := self.checkHeartbeat(decodeMsg)
 		if err != nil {
 			resultResponse.Code = duobb_proto.DUOBB_MSG_HEARTBEAT_ERROR
@@ -92,6 +119,7 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 		} else {
 			resultResponse.Data = heartbeatData
 		}
+		//}
 	case DUOBB_ACCESS_GETALLDATA:
 		return true
 	default:
@@ -171,6 +199,12 @@ func (self *DuobbProcess) OnErrorCallback() {
 }
 
 func (self *DuobbProcess) OnCloseCallback(conn tao.Connection) {
+	session := conn.GetExtraData().(Session)
+	if session.Status == LOGOUT_KICKOFF {
+		holmes.Info("conn[%s] is kickoff logout clear success.", conn.GetName())
+		return
+	}
+	
 	connName := conn.GetName()
 	holmes.Info("conn[%s] on close", connName)
 	names := strings.Split(conn.GetName(), CONN_NAME_DELIMITER)
@@ -191,9 +225,25 @@ func (self *DuobbProcess) OnCloseCallback(conn tao.Connection) {
 
 func (self *DuobbProcess) OnScheduleCallback(now time.Time, data interface{}) {
 	conn := data.(tao.Connection)
+	extra := conn.GetExtraData()
+	if extra == nil {
+		holmes.Error("client %d %s get extra data error.", conn.GetNetId(), conn.GetName())
+	} else {
+		extraData := extra.(Session)
+		//holmes.Debug("extra data: %v", extraData)
+		if extraData.Status == LOGOUT_KICKOFF {
+			extraData.CheckLogout++
+			if extraData.CheckLogout == MAX_LOGOUT_KICKOFF {
+				holmes.Warn("client %d %s kickoff max times, close it\n", conn.GetNetId(), conn.GetName())
+				conn.Close()
+				return
+			}
+			conn.SetExtraData(extraData)
+		}
+	}
 	lastTimestamp := conn.GetHeartBeat()
 	if now.UnixNano()-lastTimestamp > int64(self.cfg.ServerConfig.Timeout)*1e9 {
-		holmes.Warn("Client %d %s timeout, close it\n", conn.GetNetId(), conn.GetName())
+		holmes.Warn("client %d %s timeout, close it\n", conn.GetNetId(), conn.GetName())
 		conn.Close()
 	}
 }

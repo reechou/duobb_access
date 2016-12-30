@@ -2,10 +2,31 @@ package duobb
 
 import (
 	"fmt"
-	
-	"github.com/reechou/holmes"
+	"net/url"
+
 	"github.com/reechou/duobb_access/models"
+	"github.com/reechou/holmes"
 )
+
+func (self *DuobbProcess) heartbeatKickoff(user string) (interface{}, error) {
+	type PushMsgKickoff struct {
+		User    string `json:"user"`
+		Because string `json:"because"`
+	}
+	msg := &PushMsgKickoff{
+		User:    user,
+		Because: "该账号已在别处登录",
+	}
+	msgBytes, err := JsonEncode(msg)
+	if err != nil {
+		return nil, err
+	}
+	pushMsg := models.DuobbPushMsg{
+		Type: 3,
+		Msg:  url.QueryEscape(string(msgBytes)),
+	}
+	return []models.DuobbPushMsg{pushMsg}, nil
+}
 
 func (self *DuobbProcess) checkHeartbeat(decodeMsg []byte) (interface{}, error) {
 	request, err := JsonDecode(decodeMsg)
@@ -36,6 +57,6 @@ func (self *DuobbProcess) checkHeartbeat(decodeMsg []byte) (interface{}, error) 
 	if len(pushMsgList) == 0 {
 		return nil, nil
 	}
-	
+
 	return pushMsgList, nil
 }
