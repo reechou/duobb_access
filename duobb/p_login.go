@@ -39,11 +39,16 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 					if c.GetName() != conn.GetName() {
 						// maybe write [kick off line] msg
 						holmes.Info("client[%s] start to kick off line, for relogin", c.GetName())
-						session := c.GetExtraData().(Session)
-						session.Status = LOGOUT_KICKOFF
-						c.SetExtraData(session)
-						self.PushMsg(DUOBB_ACCESS_LOGOUT_KICKOFF, msg.UserName, nil, c)
-						//c.Close()
+						extra := c.GetExtraData()
+						if extra == nil {
+							holmes.Error("get extra data error == nil")
+							c.Close()
+						} else {
+							session := extra.(Session)
+							session.Status = LOGOUT_KICKOFF
+							c.SetExtraData(session)
+							self.PushMsg(DUOBB_ACCESS_LOGOUT_KICKOFF, msg.UserName, nil, c)
+						}
 
 						self.connMutex.Lock()
 						conn.SetName(requestUser + CONN_NAME_DELIMITER + conn.GetName())
@@ -199,10 +204,15 @@ func (self *DuobbProcess) OnErrorCallback() {
 }
 
 func (self *DuobbProcess) OnCloseCallback(conn tao.Connection) {
-	session := conn.GetExtraData().(Session)
-	if session.Status == LOGOUT_KICKOFF {
-		holmes.Info("conn[%s] is kickoff logout clear success.", conn.GetName())
-		return
+	extra := conn.GetExtraData()
+	if extra == nil {
+		holmes.Error("get extra data error == nil")
+	} else {
+		session := extra.(Session)
+		if session.Status == LOGOUT_KICKOFF {
+			holmes.Info("conn[%s] is kickoff logout clear success.", conn.GetName())
+			return
+		}
 	}
 	
 	connName := conn.GetName()
@@ -229,16 +239,16 @@ func (self *DuobbProcess) OnScheduleCallback(now time.Time, data interface{}) {
 	if extra == nil {
 		holmes.Error("client %d %s get extra data error.", conn.GetNetId(), conn.GetName())
 	} else {
-		extraData := extra.(Session)
+		session := extra.(Session)
 		//holmes.Debug("extra data: %v", extraData)
-		if extraData.Status == LOGOUT_KICKOFF {
-			extraData.CheckLogout++
-			if extraData.CheckLogout == MAX_LOGOUT_KICKOFF {
+		if session.Status == LOGOUT_KICKOFF {
+			session.CheckLogout++
+			if session.CheckLogout == MAX_LOGOUT_KICKOFF {
 				holmes.Warn("client %d %s kickoff max times, close it\n", conn.GetNetId(), conn.GetName())
 				conn.Close()
 				return
 			}
-			conn.SetExtraData(extraData)
+			conn.SetExtraData(session)
 		}
 	}
 	lastTimestamp := conn.GetHeartBeat()
