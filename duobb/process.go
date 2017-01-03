@@ -187,6 +187,7 @@ func (self *DuobbProcess) ProcessDuobbMessage(ctx tao.Context, conn tao.Connecti
 	if err != nil {
 		holmes.Error("conn[%s] write response msg[%v] error: %v", conn.GetName(), rsp, err)
 	}
+	holmes.Debug("duobb msg from backend back to front success.")
 }
 
 func (self *DuobbProcess) encodeMsg(secretKey, msg []byte) ([]byte, error) {
