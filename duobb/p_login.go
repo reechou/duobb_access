@@ -37,7 +37,6 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 			} else {
 				if c != nil {
 					if c.GetName() != conn.GetName() {
-						// maybe write [kick off line] msg
 						holmes.Info("client[%s] start to kick off line, for relogin", c.GetName())
 						extra := c.GetExtraData()
 						if extra == nil {
@@ -47,6 +46,7 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 							session := extra.(Session)
 							session.Status = LOGOUT_KICKOFF
 							c.SetExtraData(session)
+							// send kick off msg
 							self.PushMsg(DUOBB_ACCESS_LOGOUT_KICKOFF, msg.UserName, nil, c)
 						}
 
@@ -142,6 +142,7 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 		}
 		return true
 	}
+	holmes.Debug("duobb access result msg: %v", resultResponse)
 	resultMsg, err := JsonEncode(resultResponse)
 	if err != nil {
 		holmes.Error("json encode[%v] error: %v", resultResponse, err)

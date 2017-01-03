@@ -14,7 +14,7 @@ import (
 func main() {
 	tao.Register(duobb.DuobbMsgCMD, duobb.DeserializeMessage, nil)
 
-	c, err := net.Dial("tcp", "127.0.0.1:7899")
+	c, err := net.Dial("tcp", "121.40.85.37:7899")
 	if err != nil {
 		holmes.Fatal("%v", err)
 	}
