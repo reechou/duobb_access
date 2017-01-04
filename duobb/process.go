@@ -20,7 +20,7 @@ type DuobbProcess struct {
 
 	serviceMap       map[string]*BackendService
 	serviceMethodMap map[string]*BackendServiceMethod
-	connMap          map[string]tao.Connection
+	connMap          map[int]map[string]tao.Connection
 
 	cfg        *config.Config
 	sec        *Security
@@ -37,9 +37,13 @@ func NewDuobbProcess(cfg *config.Config, server tao.Server) *DuobbProcess {
 		normalHttp:       NewNormalHttp(),
 		serviceMap:       make(map[string]*BackendService),
 		serviceMethodMap: make(map[string]*BackendServiceMethod),
-		connMap:          make(map[string]tao.Connection),
+		connMap:          make(map[int]map[string]tao.Connection),
 		server:           server,
 	}
+	for _, v := range apps {
+		dp.connMap[v] = make(map[string]tao.Connection)
+	}
+	
 	dp.initService()
 	go dp.httpInit()
 
@@ -85,7 +89,11 @@ func (self *DuobbProcess) DeserializeMessage(data []byte) (tao.Message, error) {
 	dataLen := uint32(len(data))
 
 	buffer := bytes.NewBuffer(data)
-
+	
+	var appid int32
+	binary.Read(buffer, binary.LittleEndian, &appid)
+	dataLen -= 4
+	
 	var len uint32
 	binary.Read(buffer, binary.LittleEndian, &len)
 	dataLen -= 4
@@ -114,6 +122,7 @@ func (self *DuobbProcess) DeserializeMessage(data []byte) (tao.Message, error) {
 	binary.Read(buffer, binary.LittleEndian, msgBytes)
 
 	msg := &DuobbMsg{
+		AppId:    appid,
 		UserName: userNameBytes,
 		Method:   methodBytes,
 		Msg:      msgBytes,
@@ -132,6 +141,7 @@ func (self *DuobbProcess) ProcessDuobbMessage(ctx tao.Context, conn tao.Connecti
 	var secretKey []byte
 
 	rsp := &DuobbMsg{
+		AppId:    msg.AppId,
 		UserName: msg.UserName,
 		Method:   msg.Method,
 	}

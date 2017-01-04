@@ -14,28 +14,36 @@ import (
 func main() {
 	tao.Register(duobb.DuobbMsgCMD, duobb.DeserializeMessage, nil)
 
-	c, err := net.Dial("tcp", "121.40.85.37:7899")
+	go taoke()
+	go qunguan()
+	
+	stop := make(chan struct{})
+	<-stop
+}
+
+func taoke() {
+	c, err := net.Dial("tcp", "127.0.0.1:7899")
 	if err != nil {
 		holmes.Fatal("%v", err)
 	}
-
+	
 	tcpConnection := tao.NewClientConnection(0, false, c, nil)
 	defer tcpConnection.Close()
-
+	
 	tcpConnection.SetOnConnectCallback(func(client tao.Connection) bool {
 		fmt.Println("On connect")
 		return true
 	})
-
+	
 	tcpConnection.SetOnErrorCallback(func() {
 		fmt.Println("%s", "On error")
 	})
-
+	
 	tcpConnection.SetOnCloseCallback(func(client tao.Connection) {
 		fmt.Println("On close")
 		os.Exit(0)
 	})
-
+	
 	tcpConnection.SetOnMessageCallback(func(msg tao.Message, client tao.Connection) {
 		fmt.Println(string(msg.(*duobb.DuobbMsg).UserName), string(msg.(*duobb.DuobbMsg).Method), len(msg.(*duobb.DuobbMsg).Msg))
 		if string(msg.(*duobb.DuobbMsg).Method) == "DuobbAccountService.LogoutKickOff" {
@@ -44,7 +52,7 @@ func main() {
 		}
 		DecodeMsg(msg.(*duobb.DuobbMsg).Msg)
 	})
-
+	
 	tcpConnection.Start()
 	fmt.Println("start to talk:")
 	msg := &duobb.DuobbMsg{
@@ -53,28 +61,28 @@ func main() {
 		Msg:      EncodeMsg(),
 	}
 	tcpConnection.Write(msg)
-	time.Sleep(40 * time.Second)
+	time.Sleep(5 * time.Second)
 	msg = &duobb.DuobbMsg{
 		UserName: []byte("reezhou"),
 		Method:   []byte("DuobbAccountService.Heartbeat"),
 		Msg:      EncodeHeartbeat(),
 	}
 	tcpConnection.Write(msg)
-	time.Sleep(5 * time.Second)
-	msg = &duobb.DuobbMsg{
-		UserName: []byte("reezhou"),
-		Method:   []byte("DuobbAccountService.GetAllDuobbData"),
-		Msg:      EncodeMsg(),
-	}
-	tcpConnection.Write(msg)
-	time.Sleep(5 * time.Second)
-	msg = &duobb.DuobbMsg{
-		UserName: []byte("reezhou"),
-		Method:   []byte("SelectProductService.GetSpPlanInfoFromUser"),
-		Msg:      EncodePlanInfoMsg(),
-	}
-	tcpConnection.Write(msg)
-	time.Sleep(360 * time.Second)
+	//time.Sleep(15 * time.Second)
+	//msg = &duobb.DuobbMsg{
+	//	UserName: []byte("reezhou"),
+	//	Method:   []byte("DuobbAccountService.GetAllDuobbData"),
+	//	Msg:      EncodeMsg(),
+	//}
+	//tcpConnection.Write(msg)
+	//time.Sleep(15 * time.Second)
+	//msg = &duobb.DuobbMsg{
+	//	UserName: []byte("reezhou"),
+	//	Method:   []byte("SelectProductService.GetSpPlanInfoFromUser"),
+	//	Msg:      EncodePlanInfoMsg(),
+	//}
+	//tcpConnection.Write(msg)
+	time.Sleep(15 * time.Second)
 	msg = &duobb.DuobbMsg{
 		UserName: []byte("reezhou"),
 		Method:   []byte("DuobbAccountService.Logout"),
@@ -82,7 +90,69 @@ func main() {
 	}
 	tcpConnection.Write(msg)
 	time.Sleep(5 * time.Second)
+	
+	tcpConnection.Close()
+}
 
+func qunguan() {
+	c, err := net.Dial("tcp", "127.0.0.1:7899")
+	if err != nil {
+		holmes.Fatal("%v", err)
+	}
+	
+	tcpConnection := tao.NewClientConnection(0, false, c, nil)
+	defer tcpConnection.Close()
+	
+	tcpConnection.SetOnConnectCallback(func(client tao.Connection) bool {
+		fmt.Println("On connect")
+		return true
+	})
+	
+	tcpConnection.SetOnErrorCallback(func() {
+		fmt.Println("%s", "On error")
+	})
+	
+	tcpConnection.SetOnCloseCallback(func(client tao.Connection) {
+		fmt.Println("On close")
+		os.Exit(0)
+	})
+	
+	tcpConnection.SetOnMessageCallback(func(msg tao.Message, client tao.Connection) {
+		fmt.Println(string(msg.(*duobb.DuobbMsg).UserName), string(msg.(*duobb.DuobbMsg).Method), len(msg.(*duobb.DuobbMsg).Msg))
+		if string(msg.(*duobb.DuobbMsg).Method) == "DuobbAccountService.LogoutKickOff" {
+			fmt.Println("kick off")
+			client.Close()
+		}
+		DecodeMsg(msg.(*duobb.DuobbMsg).Msg)
+	})
+	
+	tcpConnection.Start()
+	fmt.Println("start to talk:")
+	msg := &duobb.DuobbMsg{
+		AppId:    1,
+		UserName: []byte("reezhou"),
+		Method:   []byte("DuobbAccountService.Login"),
+		Msg:      EncodeMsg(),
+	}
+	tcpConnection.Write(msg)
+	time.Sleep(5 * time.Second)
+	msg = &duobb.DuobbMsg{
+		AppId:    1,
+		UserName: []byte("reezhou"),
+		Method:   []byte("DuobbAccountService.Heartbeat"),
+		Msg:      EncodeHeartbeat(),
+	}
+	tcpConnection.Write(msg)
+	time.Sleep(15 * time.Second)
+	msg = &duobb.DuobbMsg{
+		AppId:    1,
+		UserName: []byte("reezhou"),
+		Method:   []byte("DuobbAccountService.Logout"),
+		Msg:      EncodeMsg(),
+	}
+	tcpConnection.Write(msg)
+	time.Sleep(5 * time.Second)
+	
 	tcpConnection.Close()
 }
 

@@ -13,6 +13,7 @@ const (
 )
 
 type DuobbMsg struct {
+	AppId    int32
 	UserName []byte
 	Method   []byte
 	Msg      []byte
@@ -24,6 +25,7 @@ func (self *DuobbMsg) MessageNumber() int32 {
 
 func (self *DuobbMsg) Serialize() ([]byte, error) {
 	buf := new(bytes.Buffer)
+	binary.Write(buf, binary.LittleEndian, self.AppId)
 	binary.Write(buf, binary.LittleEndian, int32(len(self.UserName)))
 	buf.Write(self.UserName)
 	binary.Write(buf, binary.LittleEndian, int32(len(self.Method)))
@@ -42,6 +44,10 @@ func DeserializeMessage(data []byte) (tao.Message, error) {
 	dataLen := uint32(len(data))
 
 	buffer := bytes.NewBuffer(data)
+	
+	var appid int32
+	binary.Read(buffer, binary.LittleEndian, &appid)
+	dataLen -= 4
 
 	var len uint32
 	binary.Read(buffer, binary.LittleEndian, &len)
@@ -71,6 +77,7 @@ func DeserializeMessage(data []byte) (tao.Message, error) {
 	binary.Read(buffer, binary.LittleEndian, msgBytes)
 
 	msg := &DuobbMsg{
+		AppId:    appid,
 		UserName: userNameBytes,
 		Method:   methodBytes,
 		Msg:      msgBytes,

@@ -16,3 +16,10 @@ const (
 	DUOBB_ACCESS_GETALLDATA     = "DuobbAccountService.GetAllDuobbData"
 	DUOBB_ACCESS_LOGOUT_KICKOFF = "DuobbAccountService.LogoutKickOff"
 )
+
+const (
+	APPID_DINGJIAN_TAOKE = iota
+	APPID_DINGJIAN_QUNGUAN
+)
+
+var apps []int = []int{APPID_DINGJIAN_TAOKE, APPID_DINGJIAN_QUNGUAN}
