@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"net/url"
 	"strconv"
-	
+
 	"github.com/reechou/duobb_access/models"
 	"github.com/reechou/holmes"
 )
@@ -20,7 +20,7 @@ func (self *DuobbProcess) httpInit() {
 	http.HandleFunc("/cfg/create_service", self.CreateService)
 	http.HandleFunc("/cfg/create_service_method", self.CreateServiceMethod)
 	http.HandleFunc("/cfg/load_service", self.LoadService)
-	
+
 	http.HandleFunc("/duobb/login_user_num", self.GetDuobbLoginUserNum)
 	http.HandleFunc("/duobb/create_push_msg", self.CreatePushMsg)
 
@@ -78,21 +78,25 @@ func (self *DuobbProcess) LoadService(w http.ResponseWriter, r *http.Request) {
 
 func (self *DuobbProcess) GetDuobbLoginUserNum(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
-	
+
 	appid := 0
 	if len(r.Form["appid"]) != 0 {
 		appidStr := r.Form["appid"][0]
 		appid, _ = strconv.Atoi(appidStr)
 	}
-	
+
 	type DuobbLoginUser struct {
 		User string `json:"user"`
 		IP   string `json:"ip"`
 	}
-	
+	type DuobbLoginUsers struct {
+		Count int              `json:"count"`
+		Users []DuobbLoginUser `json:"users"`
+	}
+
 	rsp := &DuobbAccessCfgHttpRes{Code: 0}
 	//rsp.Data = self.server.GetConnectionMap().Size()
-	var users []DuobbLoginUser
+	var users DuobbLoginUsers
 	self.connMutex.Lock()
 	connMap := self.connMap[appid]
 	for k, v := range connMap {
@@ -100,11 +104,12 @@ func (self *DuobbProcess) GetDuobbLoginUserNum(w http.ResponseWriter, r *http.Re
 			User: k,
 			IP:   v.GetName(),
 		}
-		users = append(users, user)
+		users.Users = append(users.Users, user)
 	}
 	self.connMutex.Unlock()
+	users.Count = len(users.Users)
 	rsp.Data = users
-	
+
 	WriteJSON(w, http.StatusOK, rsp)
 }
 
@@ -114,7 +119,7 @@ func (self *DuobbProcess) CreatePushMsg(w http.ResponseWriter, r *http.Request) 
 		holmes.Error("CreateServiceMethod json decode error: %v", err)
 		return
 	}
-	
+
 	rsp := &DuobbAccessCfgHttpRes{Code: 0}
 	req.Msg = url.QueryEscape(req.Msg)
 	holmes.Debug("create push msg req: %v", req)
@@ -124,7 +129,7 @@ func (self *DuobbProcess) CreatePushMsg(w http.ResponseWriter, r *http.Request) 
 		rsp.Code = 1
 		rsp.Msg = err.Error()
 	}
-	
+
 	WriteJSON(w, http.StatusOK, rsp)
 }
 
