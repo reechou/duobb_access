@@ -4,7 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 	"net/url"
-
+	"strconv"
+	
 	"github.com/reechou/duobb_access/models"
 	"github.com/reechou/holmes"
 )
@@ -76,8 +77,34 @@ func (self *DuobbProcess) LoadService(w http.ResponseWriter, r *http.Request) {
 }
 
 func (self *DuobbProcess) GetDuobbLoginUserNum(w http.ResponseWriter, r *http.Request) {
+	r.ParseForm()
+	
+	appid := 0
+	if len(r.Form["appid"]) != 0 {
+		appidStr := r.Form["appid"][0]
+		appid, _ = strconv.Atoi(appidStr)
+	}
+	
+	type DuobbLoginUser struct {
+		User string `json:"user"`
+		IP   string `json:"ip"`
+	}
+	
 	rsp := &DuobbAccessCfgHttpRes{Code: 0}
-	rsp.Data = self.server.GetConnectionMap().Size()
+	//rsp.Data = self.server.GetConnectionMap().Size()
+	var users []DuobbLoginUser
+	self.connMutex.Lock()
+	connMap := self.connMap[appid]
+	for k, v := range connMap {
+		user := DuobbLoginUser{
+			User: k,
+			IP:   v.GetName(),
+		}
+		users = append(users, user)
+	}
+	self.connMutex.Unlock()
+	rsp.Data = users
+	
 	WriteJSON(w, http.StatusOK, rsp)
 }
 

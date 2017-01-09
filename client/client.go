@@ -15,13 +15,14 @@ func main() {
 	tao.Register(duobb.DuobbMsgCMD, duobb.DeserializeMessage, nil)
 
 	go taoke()
-	go qunguan()
+	//go qunguan()
 	
 	stop := make(chan struct{})
 	<-stop
 }
 
 func taoke() {
+	//c, err := net.Dial("tcp", "121.40.85.37:7899")
 	c, err := net.Dial("tcp", "127.0.0.1:7899")
 	if err != nil {
 		holmes.Fatal("%v", err)
@@ -56,35 +57,35 @@ func taoke() {
 	tcpConnection.Start()
 	fmt.Println("start to talk:")
 	msg := &duobb.DuobbMsg{
-		UserName: []byte("reezhou"),
+		UserName: []byte("god"),
 		Method:   []byte("DuobbAccountService.Login"),
 		Msg:      EncodeMsg(),
 	}
 	tcpConnection.Write(msg)
 	time.Sleep(5 * time.Second)
 	msg = &duobb.DuobbMsg{
-		UserName: []byte("reezhou"),
+		UserName: []byte("god"),
 		Method:   []byte("DuobbAccountService.Heartbeat"),
 		Msg:      EncodeHeartbeat(),
 	}
 	tcpConnection.Write(msg)
 	//time.Sleep(15 * time.Second)
 	//msg = &duobb.DuobbMsg{
-	//	UserName: []byte("reezhou"),
+	//	UserName: []byte("god"),
 	//	Method:   []byte("DuobbAccountService.GetAllDuobbData"),
 	//	Msg:      EncodeMsg(),
 	//}
 	//tcpConnection.Write(msg)
 	//time.Sleep(15 * time.Second)
 	//msg = &duobb.DuobbMsg{
-	//	UserName: []byte("reezhou"),
+	//	UserName: []byte("god"),
 	//	Method:   []byte("SelectProductService.GetSpPlanInfoFromUser"),
 	//	Msg:      EncodePlanInfoMsg(),
 	//}
 	//tcpConnection.Write(msg)
 	time.Sleep(15 * time.Second)
 	msg = &duobb.DuobbMsg{
-		UserName: []byte("reezhou"),
+		UserName: []byte("god"),
 		Method:   []byte("DuobbAccountService.Logout"),
 		Msg:      EncodeMsg(),
 	}
@@ -130,7 +131,7 @@ func qunguan() {
 	fmt.Println("start to talk:")
 	msg := &duobb.DuobbMsg{
 		AppId:    1,
-		UserName: []byte("reezhou"),
+		UserName: []byte("god"),
 		Method:   []byte("DuobbAccountService.Login"),
 		Msg:      EncodeMsg(),
 	}
@@ -138,7 +139,7 @@ func qunguan() {
 	time.Sleep(5 * time.Second)
 	msg = &duobb.DuobbMsg{
 		AppId:    1,
-		UserName: []byte("reezhou"),
+		UserName: []byte("god"),
 		Method:   []byte("DuobbAccountService.Heartbeat"),
 		Msg:      EncodeHeartbeat(),
 	}
@@ -146,7 +147,7 @@ func qunguan() {
 	time.Sleep(15 * time.Second)
 	msg = &duobb.DuobbMsg{
 		AppId:    1,
-		UserName: []byte("reezhou"),
+		UserName: []byte("god"),
 		Method:   []byte("DuobbAccountService.Logout"),
 		Msg:      EncodeMsg(),
 	}
@@ -158,8 +159,8 @@ func qunguan() {
 
 func EncodeMsg() []byte {
 	s := &duobb.Security{}
-	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456reezhou")))
-	msgEncode1 := s.Base64Encode([]byte(`{"user": "reezhou"}`))
+	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456god")))
+	msgEncode1 := s.Base64Encode([]byte(`{"user": "god"}`))
 	msgEncode1 = append(secretKey, msgEncode1...)
 	result, _ := s.GzipEncode(msgEncode1)
 	return result
@@ -167,8 +168,8 @@ func EncodeMsg() []byte {
 
 func EncodeHeartbeat() []byte {
 	s := &duobb.Security{}
-	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456reezhou")))
-	msgEncode1 := s.Base64Encode([]byte(`{"user":"reezhou","lastPushMsgTime":0}`))
+	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456god")))
+	msgEncode1 := s.Base64Encode([]byte(`{"user":"god","lastPushMsgTime":0}`))
 	msgEncode1 = append(secretKey, msgEncode1...)
 	result, _ := s.GzipEncode(msgEncode1)
 	return result
@@ -176,8 +177,8 @@ func EncodeHeartbeat() []byte {
 
 func EncodePlanMsg() []byte {
 	s := &duobb.Security{}
-	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456reezhou")))
-	msgEncode1 := s.Base64Encode([]byte(`{"user":"reezhou","offset":0,"num":100}`))
+	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456god")))
+	msgEncode1 := s.Base64Encode([]byte(`{"user":"god","offset":0,"num":100}`))
 	msgEncode1 = append(secretKey, msgEncode1...)
 	result, _ := s.GzipEncode(msgEncode1)
 	return result
@@ -185,8 +186,8 @@ func EncodePlanMsg() []byte {
 
 func EncodePlanInfoMsg() []byte {
 	s := &duobb.Security{}
-	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456reezhou")))
-	msgEncode1 := s.Base64Encode([]byte(`{"user":"reezhou","planId":10}`))
+	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456god")))
+	msgEncode1 := s.Base64Encode([]byte(`{"user":"god","planId":10}`))
 	msgEncode1 = append(secretKey, msgEncode1...)
 	result, _ := s.GzipEncode(msgEncode1)
 	return result
@@ -194,7 +195,7 @@ func EncodePlanInfoMsg() []byte {
 
 func DecodeMsg(in []byte) {
 	s := &duobb.Security{}
-	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456reezhou")))
+	secretKey := s.Md5Of32(s.Md5Of32([]byte("123456god")))
 	msgDecode1, err := s.GzipDecode(in)
 	if err != nil {
 		return
