@@ -9,6 +9,7 @@ import (
 
 	"github.com/reechou/duobb_access/config"
 	"github.com/reechou/duobb_access/models"
+	"github.com/reechou/duobb_access/ext"
 	"github.com/reechou/duobb_proto"
 	"github.com/reechou/holmes"
 	"github.com/reechou/tao"
@@ -26,6 +27,7 @@ type DuobbProcess struct {
 	sec        *Security
 	jsonRpc    *JsonRpc
 	normalHttp *NormalHttp
+	dmExt      *ext.DuobbManagerExt
 	server     tao.Server
 }
 
@@ -35,6 +37,7 @@ func NewDuobbProcess(cfg *config.Config, server tao.Server) *DuobbProcess {
 		sec:              &Security{},
 		jsonRpc:          NewJsonRpc(),
 		normalHttp:       NewNormalHttp(),
+		dmExt:            ext.NewDuobbManagerExt(cfg),
 		serviceMap:       make(map[string]*BackendService),
 		serviceMethodMap: make(map[string]*BackendServiceMethod),
 		connMap:          make(map[int]map[string]tao.Connection),

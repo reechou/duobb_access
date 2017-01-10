@@ -62,7 +62,7 @@ func taoke() {
 		Msg:      EncodeMsg(),
 	}
 	tcpConnection.Write(msg)
-	time.Sleep(5 * time.Second)
+	time.Sleep(200 * time.Second)
 	msg = &duobb.DuobbMsg{
 		UserName: []byte("god"),
 		Method:   []byte("DuobbAccountService.Heartbeat"),

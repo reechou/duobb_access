@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/reechou/duobb_proto"
+	"github.com/reechou/duobb_access/ext"
 	"github.com/reechou/holmes"
 	"github.com/reechou/tao"
 )
@@ -76,6 +77,7 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 				}
 				conn.SetExtraData(sessionNew)
 				holmes.Info("user[%s] appid[%d] relogin success with conn name[%s]", requestUser, appid, conn.GetName())
+				self.sendDuobbManagerMsg(requestUser, ext.DUOBB_MANAGER_TYPE_LOGIN)
 			}
 		} else {
 			self.connMutex.Lock()
@@ -90,6 +92,7 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 			}
 			conn.SetExtraData(session)
 			holmes.Info("user[%s] appid[%d] login success with conn name[%s]", requestUser, appid, conn.GetName())
+			self.sendDuobbManagerMsg(requestUser, ext.DUOBB_MANAGER_TYPE_LOGIN)
 		}
 	case DUOBB_ACCESS_LOGOUT:
 		reqMap, err := self.parseMsg(decodeMsg)
@@ -114,6 +117,7 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 			if c.GetName() == conn.GetName() {
 				ifLogout = true
 				holmes.Info("start to logout user: %s conn: %s", requestUser, c.GetName())
+				self.sendDuobbManagerMsg(requestUser, ext.DUOBB_MANAGER_TYPE_LOGOUT)
 			} else {
 				holmes.Error("user[%s] conn.name[%s] not equal connmap.name[%s]", requestUser, conn.GetName(), c.GetName())
 				resultResponse.Code = duobb_proto.DUOBB_MSG_LOGOUT_ERROR
@@ -177,6 +181,21 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 	}
 
 	return false
+}
+
+func (self *DuobbProcess) sendDuobbManagerMsg(user string, t int) {
+	wxMsgReq := ext.DuobbManagerSendMsgReq{
+		UserName: user,
+	}
+	switch t {
+	case ext.DUOBB_MANAGER_TYPE_LOGIN:
+		wxMsgReq.Msg = fmt.Sprintf(ext.LOGIN_MSG, user)
+	case ext.DUOBB_MANAGER_TYPE_LOGOUT:
+		wxMsgReq.Msg = fmt.Sprintf(ext.LOGOUT_MSG, user)
+	case ext.DUOBB_MANAGER_TYPE_HEALTH_ERROR:
+		wxMsgReq.Msg = fmt.Sprintf(ext.HEALTH_ERROR, user)
+	}
+	self.dmExt.AsyncSendMsg(&ext.DuobbManagerReq{Uri: ext.DUOBB_MANAGER_WECHAT_MSG_URI, Req: wxMsgReq})
 }
 
 func (self *DuobbProcess) parseMsg(decodeMsg []byte) (map[string]interface{}, error) {
@@ -257,10 +276,11 @@ func (self *DuobbProcess) OnCloseCallback(conn tao.Connection) {
 func (self *DuobbProcess) OnScheduleCallback(now time.Time, data interface{}) {
 	conn := data.(tao.Connection)
 	extra := conn.GetExtraData()
+	var session Session
 	if extra == nil {
 		holmes.Error("client %d %s get extra data error.", conn.GetNetId(), conn.GetName())
 	} else {
-		session := extra.(Session)
+		session = extra.(Session)
 		if session.Status == LOGOUT_KICKOFF {
 			session.CheckLogout++
 			if session.CheckLogout == MAX_LOGOUT_KICKOFF {
@@ -275,5 +295,6 @@ func (self *DuobbProcess) OnScheduleCallback(now time.Time, data interface{}) {
 	if now.UnixNano()-lastTimestamp > int64(self.cfg.ServerConfig.Timeout)*1e9 {
 		holmes.Warn("client %d %s timeout, close it\n", conn.GetNetId(), conn.GetName())
 		conn.Close()
+		self.sendDuobbManagerMsg(session.User, ext.DUOBB_MANAGER_TYPE_HEALTH_ERROR)
 	}
 }

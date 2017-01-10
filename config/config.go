@@ -20,6 +20,10 @@ type ServerConfig struct {
 	Timeout              int
 }
 
+type DuobbManagerSrv struct {
+	HostURL string
+}
+
 type Config struct {
 	Debug   bool
 	Path    string
@@ -32,6 +36,7 @@ type Config struct {
 
 	AccountDBInfo
 	ServerConfig
+	DuobbManagerSrv
 }
 
 func NewConfig() *Config {
