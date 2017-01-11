@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/reechou/duobb_proto"
 	"github.com/reechou/duobb_access/ext"
+	"github.com/reechou/duobb_proto"
 	"github.com/reechou/holmes"
 	"github.com/reechou/tao"
 )
@@ -50,6 +50,10 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 			resultResponse.Msg = duobb_proto.MSG_DUOBB_LOGIN_ERROR
 			break
 		}
+		version, err := self.checkReqMsgVersion(reqMap)
+		if err != nil {
+			version = "0.0.0"
+		}
 		if c != nil {
 			if c.GetName() != conn.GetName() {
 				holmes.Info("client[%s] start to kick off line, for relogin", c.GetName())
@@ -69,14 +73,15 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 				//conn.SetName(requestUser + CONN_NAME_DELIMITER + conn.GetName())
 				connMap[requestUser] = conn
 				self.connMutex.Unlock()
-				
+
 				sessionNew := Session{
-					User:   requestUser,
-					Status: LOGIN,
-					AppId:  appid,
+					User:    requestUser,
+					Status:  LOGIN,
+					AppId:   appid,
+					Version: version,
 				}
 				conn.SetExtraData(sessionNew)
-				holmes.Info("user[%s] appid[%d] relogin success with conn name[%s]", requestUser, appid, conn.GetName())
+				holmes.Info("user[%s] appid[%d] version[%s] relogin success with conn name[%s]", requestUser, appid, version, conn.GetName())
 				self.sendDuobbManagerMsg(requestUser, ext.DUOBB_MANAGER_TYPE_LOGIN)
 			}
 		} else {
@@ -84,14 +89,15 @@ func (self *DuobbProcess) checkMsg(msg *DuobbMsg, secretKey []byte, decodeMsg []
 			//conn.SetName(requestUser + CONN_NAME_DELIMITER + conn.GetName())
 			connMap[requestUser] = conn
 			self.connMutex.Unlock()
-			
+
 			session := Session{
-				User:   requestUser,
-				Status: LOGIN,
-				AppId:  appid,
+				User:    requestUser,
+				Status:  LOGIN,
+				AppId:   appid,
+				Version: version,
 			}
 			conn.SetExtraData(session)
-			holmes.Info("user[%s] appid[%d] login success with conn name[%s]", requestUser, appid, conn.GetName())
+			holmes.Info("user[%s] appid[%d] version[%s] login success with conn name[%s]", requestUser, appid, version, conn.GetName())
 			self.sendDuobbManagerMsg(requestUser, ext.DUOBB_MANAGER_TYPE_LOGIN)
 		}
 	case DUOBB_ACCESS_LOGOUT:
@@ -226,6 +232,20 @@ func (self *DuobbProcess) checkReqMsgUser(reqMap map[string]interface{}) (string
 	return userStr, nil
 }
 
+func (self *DuobbProcess) checkReqMsgVersion(reqMap map[string]interface{}) (string, error) {
+	version := reqMap["version"]
+	if version == nil {
+		holmes.Error("reqmap: %v has no version field", reqMap)
+		return "", fmt.Errorf("reqmap: %v has no version field", reqMap)
+	}
+	versionStr, ok := version.(string)
+	if !ok {
+		holmes.Error("version: %v translate to string error", version)
+		return "", fmt.Errorf("version: %v translate to string error", version)
+	}
+	return versionStr, nil
+}
+
 func (self *DuobbProcess) OnConnectCallback(conn tao.Connection) bool {
 	holmes.Info("[%s] on connect", conn.GetName())
 	return true
@@ -237,19 +257,19 @@ func (self *DuobbProcess) OnErrorCallback() {
 
 func (self *DuobbProcess) OnCloseCallback(conn tao.Connection) {
 	//holmes.Debugln(self.connMap)
-	
+
 	extra := conn.GetExtraData()
 	if extra == nil {
 		holmes.Error("get extra data error == nil")
 		return
 	}
-	
+
 	session := extra.(Session)
 	if session.Status == LOGOUT_KICKOFF {
 		holmes.Info("conn[%s] is kickoff logout clear success.", conn.GetName())
 		return
 	}
-	
+
 	connName := conn.GetName()
 	holmes.Info("conn[%s] session[%v] on close", connName, session)
 	//names := strings.Split(conn.GetName(), CONN_NAME_DELIMITER)

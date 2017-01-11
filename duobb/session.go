@@ -15,4 +15,5 @@ type Session struct {
 	Status      int
 	CheckLogout int // 检测登出次数
 	AppId       int
+	Version     string
 }
